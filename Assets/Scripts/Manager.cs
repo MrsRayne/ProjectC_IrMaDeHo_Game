@@ -2,25 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Rendering;
-using UnityEngine.Rendering.HighDefinition;
 
 public class Manager : MonoBehaviour
 {
     [SerializeField] private string visionActiveLevel;
     [SerializeField] private GameObject toLoad;
-    [SerializeField] private GameObject globalVolume;
-
-    private Volume volume;
-    private MotionBlur dofComponent;
 
     private bool visionIsActive = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        volume = globalVolume.GetComponent<Volume>();
-        MotionBlur tmp;
     }
 
     // Update is called once per frame
@@ -28,9 +20,6 @@ public class Manager : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.E))
         {
-            volume.profile.TryGet<MotionBlur>(out var motionBloor);
-            motionBloor = volume.profile.Add<MotionBlur>(false);
-
             if (!visionIsActive)
             {
                 StartCoroutine(VisionActivation());
