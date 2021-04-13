@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private CharacterController controller;
-    private float speed = 5f;
-    private float gravity = -9.81f;
-    private float groundDistance = 0.9f;
-    [SerializeField] private LayerMask groundMask;
+    private CharacterController controller;    
+    
     private Vector3 velocity;
 
     bool isGrounded;
 
-    [SerializeField] private Transform groundCheck;
-
+    private float speed = 5f;
+    private float gravity = -9.81f;
+    private float groundDistance = 0.9f;
     private float mouseSensitivity = 140f;
     private float rotationOnX;
-    [SerializeField] private Transform mainCamera;
 
+    [SerializeField] private Transform mainCamera;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundMask;
 
     void Start()
     {
@@ -31,11 +31,15 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Movement
+        Movement();
+        Rotation();        
+    }
 
+    private void Movement()
+    {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if(isGrounded && velocity.y < 0)
+        if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
@@ -49,9 +53,10 @@ public class PlayerController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
 
-        // Rotation
-
+    private void Rotation()
+    {
         float mouseY = Input.GetAxis("Mouse Y") * Time.deltaTime * mouseSensitivity;
         float m_X = Input.GetAxis("Mouse X") * Time.deltaTime * mouseSensitivity;
 
@@ -61,6 +66,4 @@ public class PlayerController : MonoBehaviour
 
         transform.Rotate(Vector3.up * m_X);
     }
-
-    private void 
 }
