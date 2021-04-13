@@ -22,7 +22,7 @@ MonoBehaviour:
     m_Value: {fileID: 0}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.174
+    m_Value: 0.232
     min: 0
     max: 1
   m_MaxSamples:
@@ -130,7 +130,7 @@ MonoBehaviour:
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.273
+    m_Value: 0.413
     min: 0
     max: 1
   scatter:
