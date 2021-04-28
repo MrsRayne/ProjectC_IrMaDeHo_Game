@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
+        force = 1f;
     }
 
     void Update()
@@ -52,9 +53,9 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            force = 2f;
+            force = 2.5f;
         }
-        else
+        if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             force = 1f;
         }
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
     }
 
     private void Rotation()
