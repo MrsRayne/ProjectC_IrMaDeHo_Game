@@ -10,7 +10,8 @@ public class PlayerController : MonoBehaviour
 
     bool isGrounded;
 
-    private float speed = 5f;
+    [SerializeField] private float speed = 5f;
+    private float force;
     private float gravity = -9.81f;
     private float groundDistance = 0.9f;
     private float mouseSensitivity = 140f;
@@ -49,7 +50,16 @@ public class PlayerController : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        controller.Move(move * speed * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            force = 2f;
+        }
+        else
+        {
+            force = 1f;
+        }
+
+        controller.Move(move * speed * force * Time.deltaTime);
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
