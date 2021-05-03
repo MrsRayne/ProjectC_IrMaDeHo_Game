@@ -10,10 +10,7 @@ public class Manager : MonoBehaviour
 
     private bool visionIsActive = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -57,5 +54,7 @@ public class Manager : MonoBehaviour
         toLoad.SetActive(true);
         visionIsActive = false;
     }
+
+    
 
 }

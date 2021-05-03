@@ -4,29 +4,68 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
-    private float moveSpeed = 1f;
     [SerializeField] private float frequency;
     private float magnitude = 0.5f;
 
-    public bool facingright;
+    private GameObject player;
 
-    private Vector3 pos, localScale;
+    private Vector3 targetPos;
 
     [SerializeField] private float minX;
     [SerializeField] private float maxX;
 
-    // Start is called before the first frame update
+    private float radius = 15f;
+
+    private bool catching = false;
+
+
     void Start()
     {
-        pos = transform.position;
-
-        //localScale = transform.localScale;
+        targetPos = transform.position;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        pos += transform.right * Time.deltaTime * 0.1f;
-        transform.position = pos + transform.up * Mathf.Sin(Time.time * frequency) * magnitude;
+        //pos += transform.right * Time.deltaTime * 0.1f;
+        
+        DistanceCalculation();     
+    }
+
+
+    private void DistanceCalculation()
+    {
+        float dist = Vector3.Distance(player.transform.position, transform.position);
+
+        print("Dist to " + this.name + ": " + dist);
+
+        if (dist <= radius)
+        {
+            catching = true;
+            
+            if (Input.GetMouseButton(1))
+            {
+                Following();
+            }            
+        }
+        else
+        {
+            catching = false;
+            RandomMovement();
+        }
+    }
+
+    private void RandomMovement()
+    {
+        transform.position = targetPos + transform.up * Mathf.Sin(Time.time * frequency) * magnitude;
+    }
+
+    private void Following()
+    {
+        print("Come here!");
+
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, Time.deltaTime * 5);
+
     }
 }

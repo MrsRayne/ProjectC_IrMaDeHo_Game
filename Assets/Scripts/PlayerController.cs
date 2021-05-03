@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Movement();
-        Rotation();        
+        Rotation();
     }
 
     private void Movement()
