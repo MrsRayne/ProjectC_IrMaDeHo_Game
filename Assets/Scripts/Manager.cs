@@ -6,17 +6,18 @@ using UnityEngine.SceneManagement;
 public class Manager : MonoBehaviour
 {
     [SerializeField] private string visionActiveLevel;
-    [SerializeField] private GameObject toLoad;
+    [SerializeField] private GameObject[] toLoad;
 
     private bool visionIsActive = false;
 
     GameObject[] ghosts;
     Ghost[] ghostScript;
     bool[] catched;
+    public bool Catched;
 
     private void Start()
     {
-        ghosts = GameObject.FindGameObjectsWithTag("Mainghost");
+        ghosts = GameObject.FindGameObjectsWithTag("MainGhost");
         ghostScript = new Ghost[ghosts.Length];
 
         for (int i = 0; i < ghosts.Length; i++)
@@ -31,7 +32,7 @@ public class Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.E))
         {
             if (!visionIsActive)
             {
@@ -43,13 +44,28 @@ public class Manager : MonoBehaviour
             }           
         }
 
-        catched = new bool[ghostScript.Length];
+        /*catched = new bool[ghostScript.Length];
         for(int i = 0; i < ghostScript.Length; i++)
         {
             catched[i] = ghostScript[i].catching;
         }
+        
+
+        Catched = isCatched(catched);
         */
     }
+
+    /*bool isCatched(bool[] catched)
+    {
+        for (int i = 0; i < catched.Length; i++)
+        {
+            if (catched[i])
+            {
+                return catched[i];
+            }
+        }
+        return false;
+    }*/
 
     private void FindAllGhosts()
     {
@@ -69,7 +85,7 @@ public class Manager : MonoBehaviour
             yield return null;
         }
 
-        toLoad.SetActive(false);
+        //toLoad.SetActive(false);
         visionIsActive = true;
     }
 
@@ -82,7 +98,7 @@ public class Manager : MonoBehaviour
             yield return null;
         }
 
-        toLoad.SetActive(true);
+        //toLoad.SetActive(true);
         visionIsActive = false;
     }
 
