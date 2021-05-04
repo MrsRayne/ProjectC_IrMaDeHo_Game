@@ -8696,7 +8696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &832626467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14151,7 +14151,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1351730681
 MonoBehaviour:
@@ -14165,7 +14165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d620fc1a7e5474db480d70e5652d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visionActiveLevel: 
+  visionActiveLevel: Prototyp_GhostsWorld
   toLoad:
   - {fileID: 639681928}
   - {fileID: 919132147828069819}
@@ -20012,6 +20012,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f266b02f852f1644b635cf3baa69015, type: 3}
+--- !u!1 &2029378689
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2029378691}
+  - component: {fileID: 2029378690}
+  m_Layer: 0
+  m_Name: StaticLightingSky
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2029378690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029378689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441482e8936e35048a1dffac814e3ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Profile: {fileID: 0}
+  m_StaticLightingSkyUniqueID: 0
+--- !u!4 &2029378691
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029378689}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2046213260 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9006860988376647474, guid: 87b8b73a00d99164c9f7d429db96f682, type: 3}
@@ -27185,13 +27230,31 @@ GameObject:
   - component: {fileID: 5205183926533970444}
   - component: {fileID: 5062116452989456174}
   - component: {fileID: 5007694984053374202}
+  - component: {fileID: 2900499381292260490}
   m_Layer: 0
   m_Name: Geist_3__RehMann_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2900499381292260490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2900499381292260489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4556ec4b9343346ba66d3413a74289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 1
+  minX: 0
+  maxX: 0
+  catching: 0
+  catchBlocked: 0
 --- !u!4 &2903478027862368572
 Transform:
   m_ObjectHideFlags: 0

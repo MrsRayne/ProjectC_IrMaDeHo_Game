@@ -56,6 +56,14 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.project-auditor": {
+      "version": "file:C:/Users/pc/Downloads/ProjectAuditor-master",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "nuget.mono-cecil": "0.1.6-preview"
+      }
+    },
     "com.unity.render-pipelines.core": {
       "version": "10.4.0",
       "depth": 1,
@@ -197,22 +205,19 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.xr.oculus": {
-      "version": "1.9.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.xr.management": "4.0.1",
-        "com.unity.ugui": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
     "jp.keijiro.pcx": {
       "version": "1.0.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://registry.npmjs.com"
+    },
+    "nuget.mono-cecil": {
+      "version": "0.1.6-preview",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

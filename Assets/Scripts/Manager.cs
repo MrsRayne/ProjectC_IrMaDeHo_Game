@@ -85,7 +85,11 @@ public class Manager : MonoBehaviour
             yield return null;
         }
 
-        //toLoad.SetActive(false);
+        foreach(GameObject i in toLoad)
+        {
+            i.SetActive(false);
+        }
+
         visionIsActive = true;
     }
 
@@ -98,7 +102,11 @@ public class Manager : MonoBehaviour
             yield return null;
         }
 
-        //toLoad.SetActive(true);
+        foreach (GameObject i in toLoad)
+        {
+            i.SetActive(true);
+        }
+
         visionIsActive = false;
     }
 
