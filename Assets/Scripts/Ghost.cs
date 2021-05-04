@@ -16,7 +16,8 @@ public class Ghost : MonoBehaviour
 
     private float radius = 15f;
 
-    private bool catching = false;
+    public bool catching = false;
+    public bool catchBlocked = false;
 
 
     void Start()
@@ -40,7 +41,7 @@ public class Ghost : MonoBehaviour
 
         print("Dist to " + this.name + ": " + dist);
 
-        if (dist <= radius)
+        if (dist <= radius && !catchBlocked)
         {
             catching = true;
             
