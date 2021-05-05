@@ -39,7 +39,7 @@ public class Ghost : MonoBehaviour
     {
         float dist = Vector3.Distance(player.transform.position, transform.position);
 
-        print("Dist to " + this.name + ": " + dist);
+        //print("Dist to " + this.name + ": " + dist);
 
         if (dist <= radius && !catchBlocked)
         {

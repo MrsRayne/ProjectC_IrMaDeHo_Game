@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4350837568246551519, guid: d22ddcbd45c7ea649b7a5a71764accd9, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4350837568246551519, guid: d22ddcbd45c7ea649b7a5a71764accd9, type: 3}
       propertyPath: m_LocalScale.x
@@ -209,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87b8b73a00d99164c9f7d429db96f682, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87b8b73a00d99164c9f7d429db96f682, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1320,7 +1320,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &881030842
 MonoBehaviour:
@@ -1337,7 +1337,7 @@ MonoBehaviour:
   isGlobal: 1
   priority: 0
   blendDistance: 0
-  weight: 1
+  weight: 0.002
   sharedProfile: {fileID: 11400000, guid: 2172ef13e2cd1ad418eb0371dde4ffc5, type: 2}
 --- !u!4 &881030843
 Transform:
