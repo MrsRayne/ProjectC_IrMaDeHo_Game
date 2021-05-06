@@ -19,14 +19,11 @@ public class Manager : MonoBehaviour
     private void Start()
     {
         ghosts = GameObject.FindGameObjectsWithTag("MainGhost");
-        ghostScript = new Ghost[ghosts.Length];
 
-        for (int i = 0; i < ghosts.Length; i++)
+        foreach(GameObject ghost in ghosts)
         {
-            ghostScript[i] = ghosts[i].GetComponent<Ghost>();
+            ghost.SetActive(false);
         }
-
-        
 
     }
 
@@ -43,36 +40,6 @@ public class Manager : MonoBehaviour
             {
                 StartCoroutine(VisionOff());
             }           
-        }
-
-        /*catched = new bool[ghostScript.Length];
-        for(int i = 0; i < ghostScript.Length; i++)
-        {
-            catched[i] = ghostScript[i].catching;
-        }
-        
-
-        Catched = isCatched(catched);
-        */
-    }
-
-    /*bool isCatched(bool[] catched)
-    {
-        for (int i = 0; i < catched.Length; i++)
-        {
-            if (catched[i])
-            {
-                return catched[i];
-            }
-        }
-        return false;
-    }*/
-
-    private void FindAllGhosts()
-    {
-        foreach(GameObject i in ghosts)
-        {
-            i.GetComponent<Ghost>();
         }
     }
 
@@ -91,6 +58,11 @@ public class Manager : MonoBehaviour
             i.SetActive(false);
         }
 
+        foreach (GameObject ghost in ghosts)
+        {
+            ghost.SetActive(true);
+        }
+
         fieldOfView.SetActive(true);
         visionIsActive = true;
     }
@@ -107,6 +79,11 @@ public class Manager : MonoBehaviour
         foreach (GameObject i in toLoad)
         {
             i.SetActive(true);
+        }
+
+        foreach (GameObject ghost in ghosts)
+        {
+            ghost.SetActive(false);
         }
 
         fieldOfView.SetActive(false);

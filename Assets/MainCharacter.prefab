@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7034dcd3a326f46b9be89c78db6986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 7
   mainCamera: {fileID: 6613441483254902186}
   groundCheck: {fileID: 6613441482131437324}
   groundMask:

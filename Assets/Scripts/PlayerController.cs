@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     bool isGrounded;
 
-    [SerializeField] private float speed = 5f;
+    private float speed = 7.5f;
     private float force;
     private float gravity = -9.81f;
     private float groundDistance = 0.9f;
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            force = 2.5f;
+            force = 1.8f;
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
