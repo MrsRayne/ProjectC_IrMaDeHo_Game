@@ -7,6 +7,7 @@ public class Manager : MonoBehaviour
 {
     [SerializeField] private string visionActiveLevel;
     [SerializeField] private GameObject[] toLoad;
+    [SerializeField] private GameObject fieldOfView;
 
     private bool visionIsActive = false;
 
@@ -90,6 +91,7 @@ public class Manager : MonoBehaviour
             i.SetActive(false);
         }
 
+        fieldOfView.SetActive(true);
         visionIsActive = true;
     }
 
@@ -107,6 +109,7 @@ public class Manager : MonoBehaviour
             i.SetActive(true);
         }
 
+        fieldOfView.SetActive(false);
         visionIsActive = false;
     }
 
