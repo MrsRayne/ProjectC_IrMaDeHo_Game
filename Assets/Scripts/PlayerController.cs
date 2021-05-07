@@ -43,25 +43,30 @@ public class PlayerController : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+        Vector3 move;
+
         if (isGrounded && velocity.y < 0)
         {
             if (managerScript.visionIsActive)
             {
+                if (x > 0 || z > 0)
+                    gravity = 0;
+                else
+                    gravity = -9.81f;
+
                 velocity.y = -2f;
             }
-            else
+            else if (!managerScript.visionIsActive)
             {
                 velocity.y = -9.8f;
             }
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        Vector3 move;
-
         if (managerScript.visionIsActive)       // Movement RealWorld scene
         {
-            move = transform.right * x + mainCamera.forward * z;
+            move = transform.right * x + mainCamera.forward * z * 1.5f;
         }
         else
         {
