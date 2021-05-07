@@ -9,7 +9,7 @@ public class Manager : MonoBehaviour
     [SerializeField] private GameObject[] toLoad;
     [SerializeField] private GameObject fieldOfView;
 
-    private bool visionIsActive = false;
+    public bool visionIsActive = false;
 
     GameObject[] ghosts;
     Ghost[] ghostScript;
