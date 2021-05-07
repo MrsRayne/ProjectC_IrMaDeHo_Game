@@ -11,6 +11,7 @@ public class Manager : MonoBehaviour
 
     public bool visionIsActive = false;
 
+    GameObject dirLight;
     GameObject[] ghosts;
     Ghost[] ghostScript;
     bool[] catched;
@@ -18,6 +19,7 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
+        dirLight = GameObject.Find("Directional Light (1)");
         ghosts = GameObject.FindGameObjectsWithTag("MainGhost");
 
         foreach(GameObject ghost in ghosts)
@@ -63,6 +65,7 @@ public class Manager : MonoBehaviour
             ghost.SetActive(true);
         }
 
+        dirLight.SetActive(false);
         fieldOfView.SetActive(true);
         visionIsActive = true;
     }
@@ -86,6 +89,7 @@ public class Manager : MonoBehaviour
             ghost.SetActive(false);
         }
 
+        dirLight.SetActive(true);
         fieldOfView.SetActive(false);
         visionIsActive = false;
     }
