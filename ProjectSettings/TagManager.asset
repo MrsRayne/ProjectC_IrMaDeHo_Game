@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MainGhost
   - GhostSpot
+  - Ghost_5
   layers:
   - Default
   - TransparentFX

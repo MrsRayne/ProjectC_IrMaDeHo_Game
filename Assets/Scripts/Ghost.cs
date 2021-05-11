@@ -108,10 +108,10 @@ public class Ghost : MonoBehaviour
 
     private void GetGhost()
     {
-        print("Hab dich!");
+        //print("Hab dich!");
         this.transform.parent = ghostSpot.transform;
         transform.position = ghostSpot.transform.position;
-        transform.localScale = new Vector3 (0.05f, 0.05f, 0.05f);
+        transform.localScale = new Vector3 (0.03f, 0.04f, 0.03f);
         //GetComponent<MeshRenderer>().enabled = false;
         //Instantiate(fireFly, ghostSpot.transform.position, ghostSpot.transform.rotation);
         //fireFly.transform.parent = ghostSpot.transform;
@@ -121,9 +121,9 @@ public class Ghost : MonoBehaviour
 
     private void ReleaseGhost()
     {
-        print("Und Tschüss!");
+        //print("Und Tschüss!");
         transform.parent = null;
-        transform.localScale = new Vector3(1f, 1f, 1f);
+        transform.localScale = new Vector3(1.4f, 1.7f, 1.4f);
         //GetComponent<MeshRenderer>().enabled = true;
     }
 
