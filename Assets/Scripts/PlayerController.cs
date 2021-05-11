@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     bool isGrounded;
 
-    private float speed = 7.5f;
+    private float speed = 11f;
     private float force;
     private float gravity = -9.81f;
     private float groundDistance = 0.9f;
@@ -73,16 +73,16 @@ public class PlayerController : MonoBehaviour
             move = transform.right * x + transform.forward * z;     // Movement GhostsWorld scene
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        /*if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             force = 1.8f;
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             force = 1f;
-        }
+        }*/
 
-        controller.Move(move * speed * force * Time.deltaTime);
+        controller.Move(move * speed * Time.deltaTime);
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);

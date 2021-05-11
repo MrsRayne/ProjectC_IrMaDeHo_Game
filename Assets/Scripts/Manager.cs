@@ -8,6 +8,7 @@ public class Manager : MonoBehaviour
     [SerializeField] private string visionActiveLevel;
     [SerializeField] private GameObject[] toLoad;
     [SerializeField] private GameObject fieldOfView;
+    [SerializeField] private GameObject grumblingGhost;
 
     public bool visionIsActive = false;
 
@@ -19,8 +20,10 @@ public class Manager : MonoBehaviour
 
     private void Start()
     {
-        dirLight = GameObject.Find("Directional Light (1)");
+        dirLight = GameObject.Find("Directional Light");
         ghosts = GameObject.FindGameObjectsWithTag("MainGhost");
+
+        grumblingGhost.SetActive(false);
 
         foreach(GameObject ghost in ghosts)
         {
@@ -65,6 +68,7 @@ public class Manager : MonoBehaviour
             ghost.SetActive(true);
         }
 
+        grumblingGhost.SetActive(true);
         dirLight.SetActive(false);
         fieldOfView.SetActive(true);
         visionIsActive = true;
@@ -72,6 +76,11 @@ public class Manager : MonoBehaviour
 
     private IEnumerator VisionOff()
     {
+        foreach (GameObject i in toLoad)
+        {
+            i.SetActive(true);
+        }
+
         AsyncOperation operation = SceneManager.UnloadSceneAsync(visionActiveLevel);
 
         while (!operation.isDone)
@@ -79,16 +88,12 @@ public class Manager : MonoBehaviour
             yield return null;
         }
 
-        foreach (GameObject i in toLoad)
-        {
-            i.SetActive(true);
-        }
-
         foreach (GameObject ghost in ghosts)
         {
             ghost.SetActive(false);
         }
 
+        grumblingGhost.SetActive(false);
         dirLight.SetActive(true);
         fieldOfView.SetActive(false);
         visionIsActive = false;

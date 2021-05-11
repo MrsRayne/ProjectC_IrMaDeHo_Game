@@ -8,11 +8,15 @@ public class Ghost : MonoBehaviour
     private float magnitude = 0.5f;
 
     private GameObject player;
+    private GameObject ghostSpot;
 
     private Vector3 targetPos;
 
     [SerializeField] private float minX;
     [SerializeField] private float maxX;
+
+    [SerializeField] private GameObject fireFly;
+    [SerializeField] private GameObject grGhost;
 
     private float radius = 15f;
 
@@ -20,17 +24,17 @@ public class Ghost : MonoBehaviour
     public bool catchBlocked = false;
 
 
-    void Start()
+    private void Start()
     {
-        targetPos = transform.position;
+        
         player = GameObject.FindGameObjectWithTag("Player");
+        ghostSpot = GameObject.FindGameObjectWithTag("GhostSpot");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        //pos += transform.right * Time.deltaTime * 0.1f;
-        
+        //targetPos = transform.position;
+
         DistanceCalculation();     
     }
 
@@ -42,18 +46,27 @@ public class Ghost : MonoBehaviour
         //print("Dist to " + this.name + ": " + dist);
 
         if (dist <= radius && !catchBlocked)
-        {
-            catching = true;
-            
-            if (Input.GetMouseButton(1))
+        {            
+            if (Input.GetMouseButtonDown(1))
             {
-                Following();
-            }            
+                GetGhost();
+                catching = true;
+                grGhost.GetComponent<GrumblingGhost>().ghostCatched = true;
+
+                grGhost.GetComponent<GrumblingGhost>().catchedGhost = gameObject;
+                //Following();
+            }
+            if (Input.GetMouseButtonDown(0))
+            {
+                ReleaseGhost();
+                grGhost.GetComponent<GrumblingGhost>().catchedGhost = null;
+                //catchBlocked = false;
+            }
         }
         else
         {
             catching = false;
-            RandomMovement();
+            //RandomMovement();
         }
     }
 
@@ -68,5 +81,25 @@ public class Ghost : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, Time.deltaTime * 5);
 
+    }
+
+    private void GetGhost()
+    {
+        print("Hab dich!");
+
+        transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+        this.transform.parent = ghostSpot.transform;
+        transform.position = ghostSpot.transform.position;
+
+    }
+
+    public void ReleaseGhost()
+    {
+        grGhost.GetComponent<GrumblingGhost>().ghostCatched = false;
+
+        print("Und Tschüss!");
+        transform.parent = null;
+        transform.localScale = new Vector3(1.4f, 1.7f, 1.4f);
+        transform.localRotation = Quaternion.Euler(0, 0, 0);
     }
 }

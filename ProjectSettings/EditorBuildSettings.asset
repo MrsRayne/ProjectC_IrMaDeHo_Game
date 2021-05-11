@@ -14,9 +14,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Test 1.unity
     guid: ca2b39e8ccdae6041b66ffd394f08320
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Ptototyp_RealWorld.unity
     guid: e66a97087e0129840a540e20651a3be6
+  - enabled: 1
+    path: Assets/Scenes/Prototyp_RealWorld-puzzle.unity
+    guid: cfaebe5ebcd17ed4dba1a50f18393f71
   - enabled: 1
     path: Assets/Scenes/Prototyp_GhostsWorld.unity
     guid: 8517c72617765864dbf00c61b74c7dc8
