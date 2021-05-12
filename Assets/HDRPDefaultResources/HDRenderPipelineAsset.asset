@@ -156,7 +156,7 @@ MonoBehaviour:
   m_DefaultLookDevProfile: {fileID: 11400000, guid: 254c4fe87beb7be4fa72e1681edbed02, type: 2}
   m_RenderingPathDefaultCameraFrameSettings:
     bitDatas:
-      data1: 72198262773251917
+      data1: 72198262772989773
       data2: 13763000468760363032
     lodBias: 1
     lodBiasMode: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
     supportDitheringCrossFade: 1
     supportTerrainHole: 0
     supportProbeVolume: 0
-    supportRayTracing: 1
+    supportRayTracing: 0
     supportedRayTracingMode: 3
     probeVolumeSettings:
       atlasResolution: 128

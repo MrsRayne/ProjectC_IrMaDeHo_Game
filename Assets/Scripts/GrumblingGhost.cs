@@ -31,8 +31,8 @@ public class GrumblingGhost : MonoBehaviour
 
         if(isInFOV)
         {
-            if(ghostCatched)
-                catchedGhost.GetComponent<Ghost>().ReleaseGhost();
+            if (ghostCatched)
+                catchedGhost.GetComponent<Ghost>().Respawn();
             print("Detected");
         }
 

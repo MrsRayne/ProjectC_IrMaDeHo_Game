@@ -11,6 +11,7 @@ public class Ghost : MonoBehaviour
     private GameObject ghostSpot;
 
     private Vector3 targetPos;
+    private Vector3 startPos;
 
     [SerializeField] private float minX;
     [SerializeField] private float maxX;
@@ -26,7 +27,7 @@ public class Ghost : MonoBehaviour
 
     private void Start()
     {
-        
+        startPos = transform.position;   
         player = GameObject.FindGameObjectWithTag("Player");
         ghostSpot = GameObject.FindGameObjectWithTag("GhostSpot");
     }
@@ -93,12 +94,21 @@ public class Ghost : MonoBehaviour
 
     }
 
-    public void ReleaseGhost()
+    private void ReleaseGhost()
+    {
+        print("Und Tschüss!");
+        transform.parent = null;
+        transform.localScale = new Vector3(1.4f, 1.7f, 1.4f);
+        transform.localRotation = Quaternion.Euler(0, 0, 0);
+    }
+
+    public void Respawn()
     {
         grGhost.GetComponent<GrumblingGhost>().ghostCatched = false;
 
-        print("Und Tschüss!");
+        print(" :(( ");
         transform.parent = null;
+        transform.position = startPos;
         transform.localScale = new Vector3(1.4f, 1.7f, 1.4f);
         transform.localRotation = Quaternion.Euler(0, 0, 0);
     }
