@@ -3552,7 +3552,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243350140}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.456569, y: 2.5475774, z: 6.412245}
@@ -10110,11 +10110,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778396648}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &785296786 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0488846c7662eab4aa5af6d4fa5c1c6a, type: 3}
-  m_PrefabInstance: {fileID: 749390699}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &791599240
 GameObject:
   m_ObjectHideFlags: 0
@@ -18243,7 +18238,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417167629}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 9.001354, y: 9.44156, z: 9.567783}
@@ -23590,7 +23585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ghostCollider: {fileID: 1188640157}
   ghostFive: {fileID: 1188640155}
-  grave: {fileID: 785296786}
+  grave: {fileID: 2078240952}
   ghostMaterial: {fileID: 2100000, guid: b3a044520969b8b40bb0fabd6724e7c2, type: 2}
   graveMaterial: {fileID: 2100000, guid: 7b80d05910c31bb42bc83a5fea674ad3, type: 2}
 --- !u!65 &1916482706
@@ -23601,7 +23596,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916482703}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 9.001354, y: 9.44156, z: 9.567783}
@@ -24304,7 +24299,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977444881}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 11.030805, y: 9.44156, z: 13.863527}
@@ -25899,6 +25894,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077594854}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2078240952 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0488846c7662eab4aa5af6d4fa5c1c6a, type: 3}
+  m_PrefabInstance: {fileID: 1955530883}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2083967921
 GameObject:
   m_ObjectHideFlags: 0
@@ -26705,7 +26705,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2133956975}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 9.001354, y: 9.44156, z: 9.567783}
