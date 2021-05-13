@@ -5230,6 +5230,7 @@ MonoBehaviour:
   maxX: 0
   fireFly: {fileID: 0}
   grGhost: {fileID: 564357658}
+  camPos: {fileID: 0}
   catching: 0
   catchBlocked: 0
 --- !u!136 &388640542
@@ -7244,11 +7245,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613441482497855529, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -53.4
+      value: -13.58
       objectReference: {fileID: 0}
     - target: {fileID: 6613441482497855529, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.37
+      value: 25.52
       objectReference: {fileID: 0}
     - target: {fileID: 6613441482497855529, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7256,19 +7257,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613441482497855529, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.8233323
       objectReference: {fileID: 0}
     - target: {fileID: 6613441482497855529, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6613441482497855529, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.56755954
       objectReference: {fileID: 0}
     - target: {fileID: 6613441482497855529, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6613441482497855529, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7276,7 +7277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6613441482497855529, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 69.16
       objectReference: {fileID: 0}
     - target: {fileID: 6613441482497855529, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -7321,6 +7322,18 @@ PrefabInstance:
     - target: {fileID: 8365990024571413334, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365990024571413334, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.008
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365990024571413334, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.147
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365990024571413334, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
@@ -7680,6 +7693,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551482666}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &554932583 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6613441483254902186, guid: 6d2a458de30bdb34a8ead182b193d83c, type: 3}
+  m_PrefabInstance: {fileID: 508440211}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &561511454
 GameObject:
   m_ObjectHideFlags: 0
@@ -9449,6 +9467,7 @@ MonoBehaviour:
   maxX: 0
   fireFly: {fileID: 0}
   grGhost: {fileID: 564357658}
+  camPos: {fileID: 0}
   catching: 0
   catchBlocked: 0
 --- !u!136 &719330996
@@ -11124,6 +11143,7 @@ MonoBehaviour:
   maxX: 0
   fireFly: {fileID: 0}
   grGhost: {fileID: 564357658}
+  camPos: {fileID: 0}
   catching: 0
   catchBlocked: 0
 --- !u!136 &832626468
@@ -15235,6 +15255,7 @@ MonoBehaviour:
   maxX: 0
   fireFly: {fileID: 0}
   grGhost: {fileID: 564357658}
+  camPos: {fileID: 554932583}
   catching: 0
   catchBlocked: 0
 --- !u!136 &1188640157
@@ -18668,6 +18689,7 @@ MonoBehaviour:
   maxX: 0
   fireFly: {fileID: 0}
   grGhost: {fileID: 564357658}
+  camPos: {fileID: 0}
   catching: 0
   catchBlocked: 0
 --- !u!136 &1451120415
@@ -18898,6 +18920,7 @@ MonoBehaviour:
   maxX: 0
   fireFly: {fileID: 0}
   grGhost: {fileID: 564357658}
+  camPos: {fileID: 0}
   catching: 0
   catchBlocked: 0
 --- !u!136 &1471503843
@@ -30781,6 +30804,7 @@ MonoBehaviour:
   maxX: 0
   fireFly: {fileID: 0}
   grGhost: {fileID: 0}
+  camPos: {fileID: 0}
   catching: 0
   catchBlocked: 0
 --- !u!4 &2903478027862368572

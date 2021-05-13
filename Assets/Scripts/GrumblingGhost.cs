@@ -10,6 +10,13 @@ public class GrumblingGhost : MonoBehaviour
 
     [SerializeField] private Transform[] points;
 
+    //[SerializeField] private ArrayList[] routeOne;
+    //[SerializeField] private ArrayList[] routeTwo;
+    //[SerializeField] private ArrayList[] routeThree;
+
+    //public ArrayList[] routes = new ArrayList [3];
+
+
     private bool isInFOV = false;
     private int current = 0;
     private Transform target;
@@ -20,13 +27,15 @@ public class GrumblingGhost : MonoBehaviour
 
     private void Start()
     {
+        //routes[1] = routeOne;
         target = new GameObject("AITarget").transform;
         target.position = points[current].position;
-
+        //target.position = routeOne[current].position;
     }
 
     private void Update()
     {
+
         isInFOV = inFOV(transform, playerTransform, maxAngle, maxRadius);
 
         if(isInFOV)

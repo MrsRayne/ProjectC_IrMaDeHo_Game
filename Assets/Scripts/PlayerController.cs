@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
     private float force;
     private float gravity = -9.81f;
     private float groundDistance = 0.9f;
-    private float mouseSensitivity = 140f;
-    private float rotationOnX;
+    private float mouseSensitivity = 100f;
+    private float rotationOnX = 0f;
 
     [SerializeField] private Transform mainCamera;
     [SerializeField] private Transform groundCheck;
