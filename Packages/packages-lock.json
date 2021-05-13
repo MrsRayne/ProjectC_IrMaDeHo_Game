@@ -56,6 +56,14 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.project-auditor": {
+      "version": "file:C:/Users/pc/Downloads/ProjectAuditor-master",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "nuget.mono-cecil": "0.1.6-preview"
+      }
+    },
     "com.unity.render-pipelines.core": {
       "version": "10.5.0",
       "depth": 1,
@@ -101,6 +109,13 @@
         "com.unity.render-pipelines.core": "10.4.0",
         "com.unity.searcher": "4.3.1"
       },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.subsystemregistration": {
+      "version": "1.0.6",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.terrain-tools": {
@@ -167,12 +182,42 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.xr.legacyinputhelpers": {
+      "version": "2.1.7",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.vr": "1.0.0",
+        "com.unity.modules.xr": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.xr.management": {
+      "version": "4.0.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.subsystems": "1.0.0",
+        "com.unity.modules.vr": "1.0.0",
+        "com.unity.modules.xr": "1.0.0",
+        "com.unity.xr.legacyinputhelpers": "2.1.7",
+        "com.unity.subsystemregistration": "1.0.6"
+      },
+      "url": "https://packages.unity.com"
+    },
     "jp.keijiro.pcx": {
       "version": "1.0.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://registry.npmjs.com"
+    },
+    "nuget.mono-cecil": {
+      "version": "0.1.6-preview",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

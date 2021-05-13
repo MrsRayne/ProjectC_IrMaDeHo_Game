@@ -6,13 +6,27 @@ using UnityEngine.SceneManagement;
 public class Manager : MonoBehaviour
 {
     [SerializeField] private string visionActiveLevel;
-    [SerializeField] private GameObject toLoad;
+    [SerializeField] private GameObject[] toLoad;
+    [SerializeField] private GameObject fieldOfView;
 
-    private bool visionIsActive = false;
+    public bool visionIsActive = false;
 
-    // Start is called before the first frame update
-    void Start()
+    GameObject dirLight;
+    GameObject[] ghosts;
+    Ghost[] ghostScript;
+    bool[] catched;
+    public bool Catched;
+
+    private void Start()
     {
+        dirLight = GameObject.Find("Directional Light (1)");
+        ghosts = GameObject.FindGameObjectsWithTag("MainGhost");
+
+        foreach(GameObject ghost in ghosts)
+        {
+            ghost.SetActive(false);
+        }
+
     }
 
     // Update is called once per frame
@@ -41,7 +55,18 @@ public class Manager : MonoBehaviour
             yield return null;
         }
 
-        toLoad.SetActive(false);
+        foreach(GameObject i in toLoad)
+        {
+            i.SetActive(false);
+        }
+
+        foreach (GameObject ghost in ghosts)
+        {
+            ghost.SetActive(true);
+        }
+
+        dirLight.SetActive(false);
+        fieldOfView.SetActive(true);
         visionIsActive = true;
     }
 
@@ -54,8 +79,21 @@ public class Manager : MonoBehaviour
             yield return null;
         }
 
-        toLoad.SetActive(true);
+        foreach (GameObject i in toLoad)
+        {
+            i.SetActive(true);
+        }
+
+        foreach (GameObject ghost in ghosts)
+        {
+            ghost.SetActive(false);
+        }
+
+        dirLight.SetActive(true);
+        fieldOfView.SetActive(false);
         visionIsActive = false;
     }
+
+    
 
 }
