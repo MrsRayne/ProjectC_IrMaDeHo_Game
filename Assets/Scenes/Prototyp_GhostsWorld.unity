@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 38563bd277c79e846a64c126333dd3a0, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: b74f80ab9219c8a4983cdd423aac0e54, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: f3bd24f38dd9e0349a055eddedeadf2b, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -204,6 +204,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -4216948427090074523, guid: ad962ee17586dfe40852d3b503c48915, type: 3}
+--- !u!1 &805602305
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 805602307}
+  - component: {fileID: 805602306}
+  m_Layer: 0
+  m_Name: StaticLightingSky
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &805602306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805602305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441482e8936e35048a1dffac814e3ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Profile: {fileID: 11400000, guid: 2172ef13e2cd1ad418eb0371dde4ffc5, type: 2}
+  m_StaticLightingSkyUniqueID: 0
+--- !u!4 &805602307
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805602305}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &881030841
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +360,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4fe29a182ca276043886b41111d4f117, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8689bd1a4011383469ccb24d0116ebc2, type: 2}
     - target: {fileID: 919132149155446097, guid: 4fe29a182ca276043886b41111d4f117, type: 3}
       propertyPath: m_Name
       value: Groundfelsen (1)
@@ -328,8 +377,8 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: -5754084199372789682, guid: 4fe29a182ca276043886b41111d4f117, type: 3}
     - {fileID: -7511558181221131132, guid: 4fe29a182ca276043886b41111d4f117, type: 3}
+    - {fileID: -5754084199372789682, guid: 4fe29a182ca276043886b41111d4f117, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4fe29a182ca276043886b41111d4f117, type: 3}
 --- !u!1 &1168675383 stripped
 GameObject:
@@ -508,7 +557,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -545,7 +594,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 4120
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
