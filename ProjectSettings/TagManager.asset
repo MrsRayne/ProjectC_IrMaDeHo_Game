@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MainGhost
   - GhostSpot
+  - WayPoint
   layers:
   - Default
   - TransparentFX

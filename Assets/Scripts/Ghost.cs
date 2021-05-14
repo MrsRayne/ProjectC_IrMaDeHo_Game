@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ghost : MonoBehaviour
 {
@@ -19,8 +20,10 @@ public class Ghost : MonoBehaviour
     [SerializeField] private GameObject fireFly;
     [SerializeField] private GameObject grGhost;
 
+    [SerializeField] Image dekoElement; 
     [SerializeField] Transform camPos;
     private float ghostPlayerDistance;
+ 
 
     private float radius = 15f;
 
@@ -33,6 +36,8 @@ public class Ghost : MonoBehaviour
         startPos = transform.position;   
         player = GameObject.FindGameObjectWithTag("Player");
         ghostSpot = GameObject.FindGameObjectWithTag("GhostSpot");
+
+        dekoElement.color = new Color(10, 10, 10);
     }
 
     private void Update()
@@ -104,7 +109,7 @@ public class Ghost : MonoBehaviour
         if (ghostPlayerDistance > 2f)
         {
             transform.position = Vector3.Lerp(transform.position, player.transform.position, timeFactor * Time.deltaTime);
-            Debug.Log("I'm moving");
+            //Debug.Log("I'm moving");
         }
 
         if(ghostPlayerDistance < 2f)
@@ -112,8 +117,9 @@ public class Ghost : MonoBehaviour
             transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
             this.transform.parent = ghostSpot.transform;
             transform.position = ghostSpot.transform.position;
-            Debug.Log("I'm moving no more");
+            //Debug.Log("I'm moving no more");
             catchBlocked = true;
+            dekoElement.color = new Color(0.4f, 0.4f, 1f);
         }
 
 
@@ -166,6 +172,7 @@ public class Ghost : MonoBehaviour
             transform.localScale = new Vector3(1.4f, 1.7f, 1.4f);
             transform.localRotation = Quaternion.Euler(0, 0, 0);
             catchBlocked = false;
+            dekoElement.color = new Color (1, 1, 1);
         }
 
     }
@@ -181,5 +188,6 @@ public class Ghost : MonoBehaviour
         transform.position = startPos;
         transform.localScale = new Vector3(1.4f, 1.7f, 1.4f);
         transform.localRotation = Quaternion.Euler(0, 0, 0);
+        dekoElement.color = new Color(1, 1, 1);
     }
 }

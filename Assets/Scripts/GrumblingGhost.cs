@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GrumblingGhost : MonoBehaviour
 {
@@ -10,12 +11,13 @@ public class GrumblingGhost : MonoBehaviour
 
     [SerializeField] private Transform[] points;
 
-    //[SerializeField] private ArrayList[] routeOne;
-    //[SerializeField] private ArrayList[] routeTwo;
-    //[SerializeField] private ArrayList[] routeThree;
+    [SerializeField] private Transform[] pathOne;
+    [SerializeField] private Transform[] pathTwo;
+    [SerializeField] private Transform[] pathThree;
 
-    //public ArrayList[] routes = new ArrayList [3];
-
+    Transform[] startPoints;
+    //Transform currentPoint;
+    Transform[] index;
 
     private bool isInFOV = false;
     private int current = 0;
@@ -27,10 +29,11 @@ public class GrumblingGhost : MonoBehaviour
 
     private void Start()
     {
-        //routes[1] = routeOne;
         target = new GameObject("AITarget").transform;
+        //startPoints = new ArrayList{points, pathOne, pathTwo, pathThree};
+        //index = Random.Range(0, startPoints.Length);
+        //currentPoint = startPoints[index];
         target.position = points[current].position;
-        //target.position = routeOne[current].position;
     }
 
     private void Update()
@@ -52,6 +55,7 @@ public class GrumblingGhost : MonoBehaviour
             current++;
             if (current == points.Length)
                 current = 0;
+
 
             target.position = points[current].position;
         }

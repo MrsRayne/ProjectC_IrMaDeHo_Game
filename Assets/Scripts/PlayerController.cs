@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
     private Manager managerScript;
-    
+ 
     private Vector3 velocity;
 
     bool isGrounded;
@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private float gravity = -9.81f;
     private float groundDistance = 0.9f;
     private float mouseSensitivity = 100f;
-    private float rotationOnX = 0f;
+    private float rotationOnX;
 
     [SerializeField] private Transform mainCamera;
     [SerializeField] private Transform groundCheck;
@@ -72,8 +72,8 @@ public class PlayerController : MonoBehaviour
         {
             move = transform.right * x + transform.forward * z;     // Movement GhostsWorld scene
         }
-
-        /*if (Input.GetKeyDown(KeyCode.LeftShift))
+        
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
             force = 1.8f;
         }
@@ -81,6 +81,19 @@ public class PlayerController : MonoBehaviour
         {
             force = 1f;
         }*/
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            mainCamera.transform.position = new Vector3(transform.position.x, mainCamera.transform.position.y - 2, transform.position.z);
+            //transform.position = new Vector3(transform.position.x, transform.position.y/2, transform.position.z);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            //transform.localScale = new Vector3(2f, 2f, 2f);
+            //transform.position = new Vector3(transform.position.x, transform.position.y*2, transform.position.z);
+            mainCamera.transform.position = new Vector3(transform.position.x, mainCamera.transform.position.y + 2, transform.position.z);
+        }
 
         controller.Move(move * speed * Time.deltaTime);
         velocity.y += gravity * Time.deltaTime;
