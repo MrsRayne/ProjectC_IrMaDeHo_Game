@@ -82,6 +82,16 @@ public class PlayerController : MonoBehaviour
             force = 1f;
         }*/
 
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            mainCamera.transform.position = new Vector3(transform.position.x, mainCamera.transform.position.y - 2, transform.position.z);
+        }
+
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            mainCamera.transform.position = new Vector3(transform.position.x, mainCamera.transform.position.y + 2, transform.position.z);
+        }
+
         controller.Move(move * speed * Time.deltaTime);
         velocity.y += gravity * Time.deltaTime;
 
